@@ -28,7 +28,12 @@ window.addEventListener('click',function(event){
         counter:card.querySelector('[data-counter]').innerHTML,
     }
     // console.log(productInfo)
-    const cartItemHTML = [`
+    const iteminCart = document.querySelector(`data-id${productInfo.id}`);
+    if(iteminCart){
+        const counterElement = iteminCart.querySelector('[data-counter]')
+        counterElement.innerHTML = parseInt(counterElement.innerHTML) + parseInt(productInfo.counter);
+    } else {
+        const cartItemHTML = [`
                 <div class="cart-item" data-id${productInfo.id}>
                     <div class="cart-item-img">
                         <img src="${productInfo.imgSrc}" alt="">
@@ -36,7 +41,7 @@ window.addEventListener('click',function(event){
                     <div class="cart-content-grid">
                         <p class="text">Ваш заказ</p>
                         <p class="cart-name-product">${productInfo.title}</p>
-                        <p class="cart-price-product">${productInfo.price}<sub>KGS</sub></p>
+                        <p class="cart-price-product">${productInfo.price}</p>
                     </div>
                     <div class="counter-wrapper bucket-wrapper">
                         <div class="cart-items-control" data-action="minus">-</div>
@@ -44,10 +49,11 @@ window.addEventListener('click',function(event){
                         <div class="cart-items-control" data-action="plus">+</div>
                     </div>
                 </div>
-    `]
-        cartWrapper.insertAdjacentElement('beforeend', cartItemHTML)
-}
+                `]
+        cartWrapper.insertAdjacentHTML('beforeend', cartItemHTML)
+        }
+    }
 });
-// не понял как верстать корзину и что бы вторая window функция заработала
-// вроде всё правильно
+
+// извините хотел модифицировать прошлый код, не успел
 
