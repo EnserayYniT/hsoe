@@ -3,3 +3,88 @@
     margin: 0;
     box-sizing: border-box;
 }
+.body{
+    font-style: italic;
+    font-size: larger;
+}
+.top-body{
+    display: grid;
+    grid-template:1fr / 1fr;
+    width: 80%;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: rgb(231, 231, 231);
+    position: relative;
+    top: 40px;
+    border-radius: 40px;
+}
+.part-grid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+.top-content{
+    display: grid;
+    grid-template:1fr 1fr 1fr/ 1fr 1fr 1fr ;
+}
+.top-wrapper{
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    left: 80%;
+    top:-65px;
+}
+.bucket-btn{
+    width: 55px;
+    padding: 10px;
+    font-size: large;
+    border-radius: 30px;
+    position: relative;
+    left: 90%;
+    top: -143px;
+}
+
+
+.bottom-body{
+    display: grid;
+    grid-template:1fr / 1fr;
+    width: 80%;
+    padding: 30px;
+    margin: 0 auto;
+    background-color: rgb(231, 231, 231);
+    position: relative;
+    top: 80px;
+    border-radius: 40px;
+}
+.bottom-content{
+    display: grid;
+    grid-template:1fr 1fr 1fr/ 1fr 1fr 1fr ;
+}
+.bottom-wrapper{
+    width: 50px;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    position: relative;
+    left: 80%;
+    top:-65px;
+}
+.cart-item{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgb(255, 255, 255);
+    padding: 30px;
+    height: 80px;
+    border-radius: 40px;
+    margin-bottom: 10px;
+}
+.delete-btn{
+    width: 85px;
+    padding: 10px;
+    font-size: large;
+    border-radius: 30px;
+    position: relative;
+    left: 90%;
+    top: -99px;
+}
